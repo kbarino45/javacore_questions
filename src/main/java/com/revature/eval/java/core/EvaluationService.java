@@ -422,7 +422,7 @@ public class EvaluationService {
 		 * seeing if it's divisible by any of the found primes. For example, we start with a list of
 		 * primes whose only element is 2 (the first prime), and we look at 3:
 		 *      1. Is the number divisible by any integer in our primes list?
-		 *      2. If yes, add it to the list. Otherwise, it's not prime.
+		 *      2. If yes, the number is not a prime. Otherwise, add it to the list.
 		 * And repeat for each number until we get all primes up to that index.
 		 */
 		while (primes.size() < i) {
