@@ -23,6 +23,9 @@ public class ESTest {
 //        EvaluationService.RotationalCipher rc = new EvaluationService.RotationalCipher(13);
 //        System.out.println(rc.rotate("Gur dhvpx oebja sbk whzcf bire gur ynml qbt."));
         System.out.println(a.calculateNthPrime(6));
+        EvaluationService.AtbashCipher ab = new EvaluationService.AtbashCipher();
+        System.out.println(ab.encode("the quick brown fox jumps over the lazy dog"));
+        System.out.println(ab.decode("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"));
 
     }
 

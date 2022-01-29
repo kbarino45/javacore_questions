@@ -18,8 +18,8 @@ must implement:
 - [ ] Compute the prime factors of a given natural number.
 - [X] Create an implementation of the rotational cipher, also sometimes called the Caesar cipher.
 - [X] Given a number n, determine what the nth prime is.
-- [ ] Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East. Encode a value with the cipher
-- [ ] Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East. Decode a value with the cipher
+- [X] Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East. Encode a value with the cipher
+- [X] Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East. Decode a value with the cipher
 - [ ] Write a method that validates a number to be proper ISBN-10.
 - [ ] Determine if a sentence is a pangram.
 - [ ] Calculate the moment when someone has lived for 10^9 seconds.

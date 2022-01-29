@@ -475,23 +475,42 @@ public class EvaluationService {
 		/**
 		 * Question 13
 		 *
-		 * @param string
-		 * @return
+		 * @param string String to be encoded
+		 * @return Encoded string
 		 */
 		public static String encode(String string) {
-			// TODO Write an implementation for this method declaration
-			return null;
+			StringBuilder result = new StringBuilder();
+			int ascii;		//used to convert
+			int spacer = 0;	//adds a space after every 5 characters
+
+			for (int i = 0; i < string.length(); i++) {
+				ascii = string.charAt(i);
+				if (ascii >= 97 && ascii <= 122) {
+					spacer++;
+					result.append((char) (-ascii + 219));
+					if (spacer % 5 == 0) result.append(" ");
+				}
+			}
+			return result.toString();
 		}
 
 		/**
 		 * Question 14
 		 *
-		 * @param string
-		 * @return
+		 * @param string Atbash encoded string
+		 * @return Decoded message
 		 */
 		public static String decode(String string) {
-			// TODO Write an implementation for this method declaration
-			return null;
+			StringBuilder result = new StringBuilder();
+			int ascii;		//used to convert
+
+			for (int i = 0; i < string.length(); i++) {
+				ascii = string.charAt(i);
+				if (ascii >= 97 && ascii <= 122) {
+					result.append((char) (-ascii + 219));
+				}
+			}
+			return result.toString();
 		}
 	}
 
