@@ -21,7 +21,7 @@ must implement:
 - [X] Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East. Encode a value with the cipher
 - [X] Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East. Decode a value with the cipher
 - [X] Write a method that validates a number to be proper ISBN-10.
-- [ ] Determine if a sentence is a pangram.
+- [X] Determine if a sentence is a pangram.
 - [ ] Calculate the moment when someone has lived for 10^9 seconds.
 - [ ] Given a number, find the sum of all the unique multiples of particular numbers up to but not including that number.
 - [ ] Given a number determine whether or not it is valid per the Luhn formula.
