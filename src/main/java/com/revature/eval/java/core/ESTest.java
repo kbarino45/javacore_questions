@@ -22,10 +22,15 @@ public class ESTest {
 //        System.out.println(a.isArmstrongNumber(153));
 //        EvaluationService.RotationalCipher rc = new EvaluationService.RotationalCipher(13);
 //        System.out.println(rc.rotate("Gur dhvpx oebja sbk whzcf bire gur ynml qbt."));
-        System.out.println(a.calculateNthPrime(6));
-        EvaluationService.AtbashCipher ab = new EvaluationService.AtbashCipher();
-        System.out.println(ab.encode("the quick brown fox jumps over the lazy dog"));
-        System.out.println(ab.decode("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"));
+//        System.out.println(a.calculateNthPrime(6));
+//        EvaluationService.AtbashCipher ab = new EvaluationService.AtbashCipher();
+//        System.out.println(ab.encode("the quick brown fox jumps over the lazy dog"));
+//        System.out.println(ab.decode("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"));
+//        System.out.println(a.isValidIsbn("3-598-21508-8"));
+//        System.out.println(a.isValidIsbn("0-8044-2957-X"));
+//        System.out.println(a.isPangram("The quick brown fox jumps over the lazy dog."));
+
+
 
     }
 

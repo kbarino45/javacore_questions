@@ -3,6 +3,7 @@ package com.revature.eval.java.core;
 import java.time.temporal.Temporal;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class EvaluationService {
@@ -533,12 +534,25 @@ public class EvaluationService {
 	 * (3 * 10 + 5 * 9 + 9 * 8 + 8 * 7 + 2 * 6 + 1 * 5 + 5 * 4 + 0 * 3 + 8 * 2 + 8 *
 	 * 1) mod 11 == 0 Since the result is 0, this proves that our ISBN is valid.
 	 *
-	 * @param string
-	 * @return
+	 * @param string ISBN, containing only 10 digits (or 'X')
+	 * @return true if the string is a valid ISBN-10; false otherwise
 	 */
 	public boolean isValidIsbn(String string) {
-		// TODO Write an implementation for this method declaration
-		return false;
+		int sum = 0;
+		int count = 10;
+		for (int i = 0;i < string.length();i++) {
+			if (Character.isDigit(string.charAt(i)) || string.charAt(i) == 'X') {
+				if (Character.isDigit(string.charAt(i))) {
+					sum += count * (Character.getNumericValue(string.charAt(i)));
+					count--;
+				}
+				else if (count == 1 && string.charAt(i) == 'X') {
+					sum += count * 10;
+					break;
+				}
+			} //end if
+		} //end for
+		return sum%11==0;
 	}
 
 	/**
@@ -551,12 +565,43 @@ public class EvaluationService {
 	 * The alphabet used consists of ASCII letters a to z, inclusive, and is case
 	 * insensitive. Input will not contain non-ASCII symbols.
 	 *
-	 * @param string
-	 * @return
+	 * @param string Sentence or phrase
+	 * @return true if the sentence is a pangram; false otherwise
 	 */
 	public boolean isPangram(String string) {
-		// TODO Write an implementation for this method declaration
-		return false;
+		boolean a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
+		a=b=c=d=e=f=g=h=i=j=k=l=m=n=o=p=q=r=s=t=u=v=w=x=y=z=false;
+		for (int ind = 0;ind < string.length();ind++) {
+			switch (string.toLowerCase().charAt(ind)) {
+				case 'a': a = true; break;
+				case 'b': b = true; break;
+				case 'c': c = true; break;
+				case 'd': d = true; break;
+				case 'e': e = true; break;
+				case 'f': f = true; break;
+				case 'g': g = true; break;
+				case 'h': h = true; break;
+				case 'i': i = true; break;
+				case 'j': j = true; break;
+				case 'k': k = true; break;
+				case 'l': l = true; break;
+				case 'm': m = true; break;
+				case 'n': n = true; break;
+				case 'o': o = true; break;
+				case 'p': p = true; break;
+				case 'q': q = true; break;
+				case 'r': r = true; break;
+				case 's': s = true; break;
+				case 't': t = true; break;
+				case 'u': u = true; break;
+				case 'v': v = true; break;
+				case 'w': w = true; break;
+				case 'x': x = true; break;
+				case 'y': y = true; break;
+				case 'z': z = true; break;
+			}
+		}
+		return a&&b&&c&&d&&e&&f&&g&&h&&i&&j&&k&&l&&m&&n&&o&&p&&q&&r&&s&&t&&u&&v&&w&&x&&y&&z;
 	}
 
 	/**
